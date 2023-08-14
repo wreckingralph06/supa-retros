@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import supabase from "../config/supabaseClient";
 
 const Create = () => {
+  const navigate = useNavigate();
+
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
@@ -15,24 +18,20 @@ const Create = () => {
       return;
     }
 
-    console.log("pass1");
-
     const { data, error } = await supabase
       .from("retro_consoles")
       .insert([{ name, description, price }])
       .select("*");
 
-    console.log("pass2");
-
     if (error) {
       console.log("error: ", error);
       setFormError("Please fill in all the fields correctly.");
     }
-    console.log("pass3");
-    console.log("data: ", data);
+
     if (data) {
       console.log("data: ", data);
       setFormError(null);
+      navigate("/");
     }
   };
 
