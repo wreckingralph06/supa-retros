@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import supabase from "../config/supabaseClient";
 
-const RetroConsoleCard = ({ retroConsole }) => {
+const RetroConsoleCard = ({ retroConsole, onDelete }) => {
   const handleDelete = async () => {
     const { data, error } = await supabase
       .from("retro_consoles")
@@ -15,6 +15,7 @@ const RetroConsoleCard = ({ retroConsole }) => {
 
     if (data) {
       console.log(data);
+      onDelete(retroConsole.id);
     }
   };
 

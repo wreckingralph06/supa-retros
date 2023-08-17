@@ -7,6 +7,12 @@ const Home = () => {
   const [fetchError, setFetchError] = useState(null);
   const [retroConsoles, setRetroConsoles] = useState(null);
 
+  const handleDelete = (id) => {
+    setRetroConsoles((previousRetroConsoles) => {
+      return previousRetroConsoles.filter((rc) => rc.id !== id);
+    });
+  };
+
   useEffect(() => {
     const fetchRetroConsoles = async () => {
       const { data, error } = await supabase.from("retro_consoles").select();
@@ -34,6 +40,7 @@ const Home = () => {
               <RetroConsoleCard
                 key={retroConsole.id}
                 retroConsole={retroConsole}
+                onDelete={handleDelete}
               />
             ))}
           </div>
