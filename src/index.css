@@ -1,17 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 :root {
   --primary: #12bca2;
   --secondary: #6d15df;
 }
-h1,h2,h3 {
+h1,
+h2,
+h3 {
   margin: 0;
 }
 
 body {
   margin: 0;
   color: #333;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   background: #f2f2f2;
 }
 
@@ -64,7 +66,7 @@ nav h1 {
   height: 0;
   padding: 20px 0;
   line-height: 0px;
-  text-align: center; 
+  text-align: center;
 }
 
 form {
@@ -75,7 +77,8 @@ form {
   border-radius: 6px;
 }
 
-form input, form textarea {
+form input,
+form textarea {
   display: block;
   width: 100%;
   padding: 6px;
@@ -105,5 +108,16 @@ form button {
   padding: 6px;
   background: #eee;
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.order-by button {
+  margin-right: 10px;
+  background: var(--primary);
+  color: #fff;
+  border: 0;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-family: "Poppins";
   cursor: pointer;
 }
