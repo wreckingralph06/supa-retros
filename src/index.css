@@ -39,6 +39,10 @@ nav h1 {
   padding: 20px;
 }
 
+.retro-consoles {
+  margin: 40px;
+}
+
 .retro-console-grid {
   margin-top: 40px;
   display: grid;
