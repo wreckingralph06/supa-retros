@@ -125,3 +125,13 @@ form button {
   font-family: "Poppins";
   cursor: pointer;
 }
+
+.form-page {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.form-page form {
+  width: 50%;
+}

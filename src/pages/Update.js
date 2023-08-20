@@ -34,7 +34,7 @@ const Update = () => {
   }, [id, navigate]);
 
   return (
-    <div className="update-page">
+    <div className="form-page">
       <form>
         <label htmlFor="name">Name:</label>
         <input
