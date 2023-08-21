@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import supabase from "../config/supabaseClient";
+import logo192 from "../public/gameboy.jpg";
 
 const RetroConsoleCard = ({ retroConsole, onDelete }) => {
   const handleDelete = async () => {
@@ -21,8 +22,9 @@ const RetroConsoleCard = ({ retroConsole, onDelete }) => {
 
   return (
     <div className="retro-console-card">
-      <h3>{retroConsole.name}</h3>
-      <p>{retroConsole.description}</p>
+      <img className="card-image" src={logo192} alt="logo192"></img>
+      <h3 className="console-name">{retroConsole.name}</h3>
+      <p className="console-description">{retroConsole.description}</p>
       <div className="price">{retroConsole.price}</div>
       <div className="buttons">
         <Link to={"/" + retroConsole.id}>

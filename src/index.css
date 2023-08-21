@@ -46,7 +46,7 @@ nav h1 {
 .retro-console-grid {
   margin-top: 40px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 40px;
 }
 
@@ -57,6 +57,9 @@ nav h1 {
   box-sizing: border-box;
   border-radius: 6px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .retro-console-card .price {
@@ -71,6 +74,11 @@ nav h1 {
   padding: 20px 0;
   line-height: 0px;
   text-align: center;
+}
+
+.retro-console-card img {
+  width: 220px;
+  height: 150px;
 }
 
 form {
@@ -113,6 +121,14 @@ form button {
   background: #eee;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.retro-console-card .console-name {
+  margin-top: 10px;
+}
+
+.retro-console-card .console-description {
+  padding: 10px;
 }
 
 .order-by button {
