@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import supabase from "../config/supabaseClient";
-import logo192 from "../public/gameboy.jpg";
+import logo192 from "../assets/gameboy.jpg";
 
 const RetroConsoleCard = ({ retroConsole, onDelete }) => {
   const handleDelete = async () => {
