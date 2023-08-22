@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import supabase from "../config/supabaseClient";
 import logo192 from "../assets/gameboy.jpg";
+import EditIcon from "@mui/icons-material/Edit";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const RetroConsoleCard = ({ retroConsole, onDelete }) => {
   const handleDelete = async () => {
@@ -28,11 +30,13 @@ const RetroConsoleCard = ({ retroConsole, onDelete }) => {
       <div className="price">{retroConsole.price}</div>
       <div className="buttons">
         <Link to={"/" + retroConsole.id}>
-          <i className="material-icons">Edit</i>
+          <button className="edit-icon">
+            <EditIcon />
+          </button>
         </Link>
-        <i className="material-icons" onClick={handleDelete}>
-          delete
-        </i>
+        <button className="delete-icon" onClick={handleDelete}>
+          <DeleteIcon />
+        </button>
       </div>
     </div>
   );

@@ -151,3 +151,19 @@ form button {
 .form-page form {
   width: 50%;
 }
+
+.edit-icon {
+  border-style: none;
+  cursor: pointer;
+  border-radius: 25%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.delete-icon {
+  border-style: none;
+  cursor: pointer;
+  border-radius: 25%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
