@@ -10,6 +10,10 @@ const Update = () => {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
 
+  const cancelAction = () => {
+    navigate("/");
+  };
+
   useEffect(() => {
     const fetchRetroConsole = async () => {
       const { data, error } = await supabase
@@ -58,6 +62,9 @@ const Update = () => {
           onChange={(e) => setPrice(e.target.value)}
         />
         <button>Update Retro Console</button>
+        <button className="cancel-button" onClick={cancelAction}>
+          Cancel
+        </button>
         {/* {formError && <p className="error">{formError}</p>} */}
       </form>
     </div>
