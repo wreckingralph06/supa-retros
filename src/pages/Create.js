@@ -10,6 +10,10 @@ const Create = () => {
   const [price, setPrice] = useState("");
   const [formError, setFormError] = useState(null);
 
+  const cancelAction = () => {
+    navigate("/");
+  };
+
   const handleSubmit = async (e) => {
     console.log("handlesubmit");
     e.preventDefault();
@@ -60,6 +64,9 @@ const Create = () => {
           onChange={(e) => setPrice(e.target.value)}
         />
         <button>Create Retro Console</button>
+        <button className="cancel-button" onClick={cancelAction}>
+          Cancel
+        </button>
         {formError && <p className="error">{formError}</p>}
       </form>
     </div>
